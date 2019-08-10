@@ -101,18 +101,18 @@
 
 
 
-  <meta name="description" content="shadowscoket 配置多端口 (需要配置防火墙)先将要设置的端口在firewall防火墙放行 12firewall-cmd --zone=public --add-port=52300/tcp --permanent  firewall-cmd --zone=public --add-port=52300/udp --permanent  查看firewall 开放的所有端口 1firew">
-<meta name="keywords" content="Shadowsocet">
+  <meta name="description" content="原因因为最近项目需求中需要提供对异步执行任务终止的功能，所以在寻找停止celery task任务的方法。这种需求以前没有碰到过，所以，只能求助于百度和google，但是找遍了资料，都没找到相关的能停止celery task任务的方法(网上找到的一个方法实测不能用，可能是celery版本的原因，我的项目目前使用的是celery 4.0.2) 解决过程由于网上找不到解决办法，于是只能自己想办法了。">
+<meta name="keywords" content="celery,python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shadowsocet配置多端口">
-<meta property="og:url" content="http://yoursite.com/2019/08/10/shadowscoket 配置多端口 (需要配置防火墙)/index.html">
+<meta property="og:title" content="celery中停止执行task">
+<meta property="og:url" content="http://yoursite.com/2019/07/06/celery中停止执行task/index.html">
 <meta property="og:site_name" content="Mr.chen的blog">
-<meta property="og:description" content="shadowscoket 配置多端口 (需要配置防火墙)先将要设置的端口在firewall防火墙放行 12firewall-cmd --zone=public --add-port=52300/tcp --permanent  firewall-cmd --zone=public --add-port=52300/udp --permanent  查看firewall 开放的所有端口 1firew">
+<meta property="og:description" content="原因因为最近项目需求中需要提供对异步执行任务终止的功能，所以在寻找停止celery task任务的方法。这种需求以前没有碰到过，所以，只能求助于百度和google，但是找遍了资料，都没找到相关的能停止celery task任务的方法(网上找到的一个方法实测不能用，可能是celery版本的原因，我的项目目前使用的是celery 4.0.2) 解决过程由于网上找不到解决办法，于是只能自己想办法了。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-10T08:27:08.104Z">
+<meta property="og:updated_time" content="2019-08-10T03:21:14.317Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shadowsocet配置多端口">
-<meta name="twitter:description" content="shadowscoket 配置多端口 (需要配置防火墙)先将要设置的端口在firewall防火墙放行 12firewall-cmd --zone=public --add-port=52300/tcp --permanent  firewall-cmd --zone=public --add-port=52300/udp --permanent  查看firewall 开放的所有端口 1firew">
+<meta name="twitter:title" content="celery中停止执行task">
+<meta name="twitter:description" content="原因因为最近项目需求中需要提供对异步执行任务终止的功能，所以在寻找停止celery task任务的方法。这种需求以前没有碰到过，所以，只能求助于百度和google，但是找遍了资料，都没找到相关的能停止celery task任务的方法(网上找到的一个方法实测不能用，可能是celery版本的原因，我的项目目前使用的是celery 4.0.2) 解决过程由于网上找不到解决办法，于是只能自己想办法了。">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/08/10/shadowscoket 配置多端口 (需要配置防火墙)/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/06/celery中停止执行task/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>Shadowsocet配置多端口 | Mr.chen的blog</title>
+  <title>celery中停止执行task | Mr.chen的blog</title>
   
 
 
@@ -360,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/10/shadowscoket 配置多端口 (需要配置防火墙)/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/06/celery中停止执行task/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.chen">
@@ -377,7 +377,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Shadowsocet配置多端口
+          <h1 class="post-title" itemprop="name headline">celery中停止执行task
 
               
             
@@ -403,7 +403,7 @@
                 
               
 
-              <time title="Created: 2019-08-10 13:52:50 / Modified: 16:27:08" itemprop="dateCreated datePublished" datetime="2019-08-10T13:52:50+08:00">2019-08-10</time>
+              <time title="Created: 2019-07-06 17:26:24" itemprop="dateCreated datePublished" datetime="2019-07-06T17:26:24+08:00">2019-07-06</time>
             </span>
           
 
@@ -411,8 +411,33 @@
             
 
             
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-08-10 11:21:14" itemprop="dateModified" datetime="2019-08-10T11:21:14+08:00">2019-08-10</time>
+              </span>
+            
           
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -445,36 +470,17 @@
       
 
       
-        <h2 id="shadowscoket-配置多端口-需要配置防火墙"><a href="#shadowscoket-配置多端口-需要配置防火墙" class="headerlink" title="shadowscoket 配置多端口 (需要配置防火墙)"></a>shadowscoket 配置多端口 (需要配置防火墙)</h2><p>先将要设置的端口在firewall防火墙放行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=52300/tcp --permanent  </span><br><span class="line">firewall-cmd --zone=public --add-port=52300/udp --permanent</span><br></pre></td></tr></table></figure>
+        <a id="more"></a>
 
-<p>查看firewall 开放的所有端口</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --list-ports</span><br></pre></td></tr></table></figure>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>因为最近项目需求中需要提供对异步执行任务终止的功能，所以在寻找停止celery task任务的方法。这种需求以前没有碰到过，所以，只能求助于百度和google，但是找遍了资料，都没找到相关的能停止celery task任务的方法(网上找到的一个方法实测不能用，可能是celery版本的原因，我的项目目前使用的是celery 4.0.2)</p>
+<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>由于网上找不到解决办法，于是只能自己想办法了。<br>想到celery 管理工具flower里面好像有停止celery task的功能，于是去找flower的源码，找到接口的源码如下:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">logger.info(<span class="string">"Revoking task '%s'"</span>, taskid)</span><br><span class="line">terminate = self.get_argument(<span class="string">'terminate'</span>, default=<span class="literal">False</span>, type=bool)</span><br><span class="line">self.capp.control.revoke(taskid, terminate=terminate)</span><br><span class="line">self.write(dict(message=<span class="string">"Revoked '%s'"</span> % taskid))</span><br></pre></td></tr></table></figure>
 
-<p>然后去将原来的shadowscoket配置文件进行备份</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp  /etc/shadowsocks.json  /etc/shadowsocks.json.bak</span><br></pre></td></tr></table></figure>
+<p>核心代码是<code>self.capp.control.revoke</code> 想到去celery里面找寻<code>revoke</code>函数，发现有两处比较可疑，第一个是<code>celery.worker.control.revoke</code>，第二个是<code>celery.app.control.Control.revoke</code>，直觉来看，应该是第二个方法，但是第二个方法是在一个类里面的，要调用这个方法首先需要获取到celery app的实例，后来去celery 配置里面找，发现在<strong>init</strong>.py文件里面有<code>__all__ = [&#39;celery_app&#39;]</code>这么一句，于是找到突破点了，引用这个包就能获取到celery_app了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> test.ceyery_proj <span class="keyword">import</span> celery_app</span><br><span class="line">celery_app.control.revoke(task_id, terminate=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<p>然后打开配置文件替换成以下内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim   /etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">&quot;local_address&quot;:&quot;127.0.0.1&quot;,</span><br><span class="line">&quot;local_port&quot;:1080,</span><br><span class="line">&quot;port_password&quot;:&#123;</span><br><span class="line">&quot;52300&quot;:&quot;chenshuo003&quot;,</span><br><span class="line">&quot;52500&quot;:&quot;chenshuo003&quot;</span><br><span class="line">&#125;,</span><br><span class="line">&quot;obfs&quot;:&quot;plain&quot;,</span><br><span class="line">&quot;obfs_param&quot;:&quot;&quot;,</span><br><span class="line">&quot;timeout&quot;:300,</span><br><span class="line">&quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">&quot;fast_open&quot;: false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后重启shadowsocket服务并查看状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 重启服务</span><br><span class="line">/etc/init.d/shadowsocks restart</span><br><span class="line">## 查看服务状态</span><br><span class="line">/etc/init.d/shadowsocks status</span><br></pre></td></tr></table></figure>
-
-<p>重启锐速</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">## 重启锐速</span><br><span class="line">service serverSpeeder restart</span><br><span class="line"></span><br><span class="line">##查看锐速状态</span><br><span class="line">service serverSpeeder status</span><br></pre></td></tr></table></figure>
-
-<h4 id="查看当前端口有多少IP链接-脚本有后台-需要手动禁止ip–hosts-deny"><a href="#查看当前端口有多少IP链接-脚本有后台-需要手动禁止ip–hosts-deny" class="headerlink" title="查看当前端口有多少IP链接(脚本有后台,需要手动禁止ip–hosts.deny)"></a>查看当前端口有多少IP链接(脚本有后台,需要手动禁止ip–hosts.deny)</h4><hr>
-<p>使用netstat 命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp |  grep 52300</span><br></pre></td></tr></table></figure>
-
-<p>找到链接的ip,只要不是自己的,全部禁了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">### 打开hosts.deny文件</span><br><span class="line">vim /etc/hosts.deny </span><br><span class="line">### 将想要禁止的ip添加上去</span><br><span class="line">125.23.223.2</span><br></pre></td></tr></table></figure>
-
-<p>然后重启网卡服务,使hosts.deny文件生效</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart network</span><br></pre></td></tr></table></figure>
-
+<p>通过这个方法就能终止正在执行的task，至于task_id在执行任务的时候返回了，我将这个id存储在数据库中，这样就可以被拿来控制task的执行了。</p>
+<p>写这篇文档的目的主要是帮助小伙伴们不要再踩这个坑了，也为celery提供一点文档补充吧。</p>
 
       
     </div>
@@ -509,7 +515,7 @@
   <li class="post-copyright-link">
     <strong>Post link: </strong>
     
-    <a href="http://yoursite.com/2019/08/10/shadowscoket 配置多端口 (需要配置防火墙)/" title="Shadowsocet配置多端口">http://yoursite.com/2019/08/10/shadowscoket 配置多端口 (需要配置防火墙)/</a>
+    <a href="http://yoursite.com/2019/07/06/celery中停止执行task/" title="celery中停止执行task">http://yoursite.com/2019/07/06/celery中停止执行task/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
@@ -525,7 +531,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Shadowsocet/" rel="tag"><i class="fa fa-tag"></i> Shadowsocet</a>
+            <a href="/tags/celery/" rel="tag"><i class="fa fa-tag"></i> celery</a>
+          
+            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
           
         </div>
       
@@ -538,8 +546,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/10/flask笔记/" rel="next" title="flask笔记">
-                <i class="fa fa-chevron-left"></i> flask笔记
+              <a href="/2019/07/06/websocket翻译/" rel="next" title="websocket翻译">
+                <i class="fa fa-chevron-left"></i> websocket翻译
               </a>
             
           </div>
@@ -548,8 +556,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/10/git/" rel="prev" title="Git的安装及常用操作">
-                Git的安装及常用操作 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/10/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -770,7 +778,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#shadowscoket-配置多端口-需要配置防火墙"><span class="nav-number">1.</span> <span class="nav-text">shadowscoket 配置多端口 (需要配置防火墙)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看当前端口有多少IP链接-脚本有后台-需要手动禁止ip–hosts-deny"><span class="nav-number">1.0.1.</span> <span class="nav-text">查看当前端口有多少IP链接(脚本有后台,需要手动禁止ip–hosts.deny)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-number">1.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决过程"><span class="nav-number">2.</span> <span class="nav-text">解决过程</span></a></li></ol></div>
             
 
           </div>
